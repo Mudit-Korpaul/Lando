@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lando/static/css/main.a9e6eb3f.css",
+    "main.js": "/Lando/static/js/main.aeda61fb.js",
+    "index.html": "/Lando/index.html",
+    "main.a9e6eb3f.css.map": "/Lando/static/css/main.a9e6eb3f.css.map",
+    "main.aeda61fb.js.map": "/Lando/static/js/main.aeda61fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9e6eb3f.css",
+    "static/js/main.aeda61fb.js"
+  ]
+}
