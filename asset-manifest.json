@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Lando/static/css/main.a9e6eb3f.css",
-    "main.js": "/Lando/static/js/main.aeda61fb.js",
+    "main.css": "/Lando/static/css/main.335499a4.css",
+    "main.js": "/Lando/static/js/main.6ff8571a.js",
     "index.html": "/Lando/index.html",
-    "main.a9e6eb3f.css.map": "/Lando/static/css/main.a9e6eb3f.css.map",
-    "main.aeda61fb.js.map": "/Lando/static/js/main.aeda61fb.js.map"
+    "main.335499a4.css.map": "/Lando/static/css/main.335499a4.css.map",
+    "main.6ff8571a.js.map": "/Lando/static/js/main.6ff8571a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9e6eb3f.css",
-    "static/js/main.aeda61fb.js"
+    "static/css/main.335499a4.css",
+    "static/js/main.6ff8571a.js"
   ]
 }
