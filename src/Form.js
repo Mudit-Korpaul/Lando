@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import Dropdown from "react-animated-dropdown";
 import "./Form.css";
 
 function Tabs() {
@@ -7,6 +9,66 @@ function Tabs() {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  const cryptos = [
+    "Bitcoin (BTC)",
+    "Ethereum (ETH)",
+    "Binance Coin (BNB)",
+    "Tether (USDT)",
+    "Solana (SOL)",
+    "Cardano (ADA)",
+    "USD Coin (USDC)",
+    "XRP (XRP)",
+    "Terra (LUNA)",
+    "Polkadot (DOT)",
+  ];
+
+  const [crypto, setCrypto] = useState("");
+
+  const sellCryptos = [
+    "Bitcoin (BTC)",
+    "Ethereum (ETH)",
+    "Binance Coin (BNB)",
+    "Tether (USDT)",
+    "Solana (SOL)",
+    "Cardano (ADA)",
+    "USD Coin (USDC)",
+    "XRP (XRP)",
+    "Terra (LUNA)",
+    "Polkadot (DOT)",
+  ];
+
+  const [sellCrypto, setSellCrypto] = useState("");
+
+  const methods = [
+    "Credit/Debit",
+    "PayPal",
+    "Skrill",
+    "Transfer Wise",
+    "Bank Transfer",
+    "Gift Cards",
+    "Bitcoin Cash",
+    "XLM",
+    "Cashapp",
+    "Ezyremitt",
+  ];
+
+  const [method, setMethod] = useState("");
+
+  const sellMethods = [
+    "Credit/Debit",
+    "PayPal",
+    "Skrill",
+    "Transfer Wise",
+    "Bank Transfer",
+    "Gift Cards",
+    "Bitcoin Cash",
+    "XLM",
+    "Cashapp",
+    "Ezyremitt",
+  ];
+
+  const [sellMethod, setSellMethod] = useState("");
 
   return (
     <div className="container">
@@ -33,29 +95,31 @@ function Tabs() {
         >
           <form action="/">
             <div class="wrapper flex">
-              <div class="form-group">
+              <div class="form-group form">
                 <input
                   type="number"
                   class="form-control"
                   id="amount"
                   placeholder=" "
                 />
-                <label for="amount">Buy Amount</label>
+                <label htmlFor="amount">Buy Amount</label>
               </div>
 
-              <select id="coins" class="form-control form-control-lg">
-                <i class="fas fa-caret-down"></i>
-                <option>Bitcoin (BTC)</option>
-                <option>Ethereum (ETH)</option>
-                <option>Binance Coin (BNB)</option>
-                <option>Tether (USDT)</option>
-                <option>Solana (SOL)</option>
-                <option>Cardano (ADA)</option>
-                <option>USD Coin (USDC)</option>
-                <option>XRP (XRP)</option>
-                <option>Terra (LUNA)</option>
-                <option>Polkadot (DOT)</option>
-              </select>
+              <Dropdown
+                dropdownOptions={cryptos}
+                dropdownValue={crypto}
+                onChange={(e) => setCrypto(e.target.value)}
+                width="250px"
+                dropdownPlaceholder="Currency"
+                mainFontColor="#8e05c2"
+                dropdownFontColor="white"
+                // mainBackgroundColor="green"
+                dropdownBackgroundColor="#8e05c2"
+                optionHoverColor="#700b97"
+                fontSize="15px"
+                padding="1em 2em -.5em"
+                closeOnOutsideClick={true}
+              />
             </div>
 
             <div className="cont">
@@ -67,25 +131,28 @@ function Tabs() {
                 </h2>
               </div>
               <div className="int flex">
-                <div className="circle">-</div>
+                <div className="circle">+</div>
                 <h2 className="int-content">
                   Transfer Time <i class="fas fa-arrow-right"></i> 0.5 sec.
                 </h2>
               </div>
             </div>
             <div className="trade-method">
-              <select id="method" class="form-control form-control-lg">
-                <option>Credit/Debit</option>
-                <option>PayPal</option>
-                <option>Skrill</option>
-                <option>Transfer Wise</option>
-                <option>Bank Transfer</option>
-                <option>Gift Cards</option>
-                <option>Bitcoin Cash</option>
-                <option>XLM</option>
-                <option>Cashapp</option>
-                <option>Ezyremitt</option>
-              </select>
+              <Dropdown
+                dropdownOptions={methods}
+                dropdownValue={method}
+                onChange={(e) => setMethod(e.target.value)}
+                width="80%"
+                dropdownPlaceholder="Tranfer Method"
+                mainFontColor="#8e05c2"
+                dropdownFontColor="white"
+                // mainBackgroundColor="green"
+                dropdownBackgroundColor="#8e05c2"
+                optionHoverColor="#700b97"
+                fontSize="15px"
+                padding="1em 2em -.5em"
+                closeOnOutsideClick={true}
+              />
             </div>
             <button className="btn btn-lg form-btn">Search Offers</button>
           </form>
@@ -98,7 +165,7 @@ function Tabs() {
         >
           <form action="/">
             <div class="wrapper flex">
-              <div class="form-group">
+              <div class="form-group form">
                 <input
                   type="number"
                   class="form-control"
@@ -108,18 +175,21 @@ function Tabs() {
                 <label for="amount">Sell Amount</label>
               </div>
 
-              <select id="coins" class="form-control form-control-lg">
-                <option>Bitcoin (BTC)</option>
-                <option>Ethereum (ETH)</option>
-                <option>Binance Coin (BNB)</option>
-                <option>Tether (USDT)</option>
-                <option>Solana (SOL)</option>
-                <option>Cardano (ADA)</option>
-                <option>USD Coin (USDC)</option>
-                <option>XRP (XRP)</option>
-                <option>Terra (LUNA)</option>
-                <option>Polkadot (DOT)</option>
-              </select>
+              <Dropdown
+                dropdownOptions={sellCryptos}
+                dropdownValue={sellCrypto}
+                onChange={(e) => setSellCrypto(e.target.value)}
+                width="250px"
+                dropdownPlaceholder="Currency"
+                mainFontColor="#8e05c2"
+                dropdownFontColor="white"
+                // mainBackgroundColor="green"
+                dropdownBackgroundColor="#8d05c2d8"
+                optionHoverColor="#700b97"
+                fontSize="15px"
+                padding="1em 2em -.5em"
+                closeOnOutsideClick={true}
+              />
             </div>
 
             <div className="cont">
@@ -131,27 +201,28 @@ function Tabs() {
                 </h2>
               </div>
               <div className="int flex">
-                <div className="circle">-</div>
+                <div className="circle">+</div>
                 <h2 className="int-content">
                   Transfer Time <i class="fas fa-arrow-right"></i> 0.5 sec.
                 </h2>
               </div>
             </div>
 
-            <div className="trade-method">
-              <select id="method" class="form-control form-control-lg">
-                <option>Credit/Debit</option>
-                <option>PayPal</option>
-                <option>Skrill</option>
-                <option>Transfer Wise</option>
-                <option>Bank Transfer</option>
-                <option>Gift Cards</option>
-                <option>Bitcoin Cash</option>
-                <option>XLM</option>
-                <option>Cashapp</option>
-                <option>Ezyremitt</option>
-              </select>
-            </div>
+            <Dropdown
+              dropdownOptions={sellMethods}
+              dropdownValue={sellMethod}
+              onChange={(e) => setSellMethod(e.target.value)}
+              width="80%"
+              dropdownPlaceholder="Tranfer Method"
+              mainFontColor="#8e05c2"
+              dropdownFontColor="white"
+              // mainBackgroundColor="green"
+              dropdownBackgroundColor="#8e05c2"
+              optionHoverColor="#700b97"
+              fontSize="15px"
+              padding="1em 2em -.5em"
+              closeOnOutsideClick={true}
+            />
             <button className="btn btn-lg form-btn">Search Offers</button>
           </form>
         </div>

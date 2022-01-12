@@ -86,6 +86,7 @@ input:not(:placeholder-shown) ~ label {
 input:focus {
   border-style: 1px !important;
   box-shadow: none !important;
+  border-color: #8e05c2 !important;
 }
 
 .flex {
@@ -106,8 +107,8 @@ input:focus {
   margin: 0 auto !important;
 }
 
-input {
-  width: 102% !important;
+.form input {
+  width: 110% !important;
   font-size: 18px !important;
   margin-bottom: 0 !important;
   height: 40px;
